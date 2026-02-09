@@ -2,7 +2,7 @@
   "name": "nextjs-route-jumper",
   "displayName": "Next.js Route Jumper",
   "description": "Quickly jump to any route source file in Next.js projects (App Router + Pages Router)",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "publisher": "nahtnam",
   "repository": {

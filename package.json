@@ -1,0 +1,71 @@
+{
+  "name": "nextjs-route-jumper",
+  "displayName": "Next.js Route Jumper",
+  "description": "Quickly jump to any route source file in Next.js projects (App Router + Pages Router)",
+  "version": "0.0.1",
+  "license": "MIT",
+  "publisher": "nahtnam",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nahtnam/nextjs-route-jumper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nahtnam/nextjs-route-jumper/issues"
+  },
+  "icon": "icon.png",
+  "homepage": "https://github.com/nahtnam/nextjs-route-jumper#readme",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "nextjs",
+    "next.js",
+    "app-router",
+    "pages-router",
+    "routes",
+    "navigation"
+  ],
+  "activationEvents": [
+    "workspaceContains:**/next.config.*",
+    "onCommand:nextjs-route-jumper.openRoute"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "nextjs-route-jumper.openRoute",
+        "title": "Next.js Route Jumper: Open"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "nextjs-route-jumper.openRoute",
+        "key": "ctrl+shift+r",
+        "mac": "cmd+shift+r"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "test:unit": "mocha out/test/**/*.test.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "typescript-eslint": "^8.54.0",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3",
+    "mocha": "^11.0.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
